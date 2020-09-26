@@ -2,16 +2,16 @@
 class Preq < Formula
   desc ""
   homepage ""
-  version "0.0.2-rc6"
+  version "0.0.2-rc7"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc6/preq_0.0.2-rc6_Darwin_x86_64.tar.gz"
-    sha256 "8f9eee65557f2539e924ff643970fd7f2b664ad2560158ab22744254c27d3294"
+    url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc7/preq_0.0.2-rc7_Darwin_x86_64.tar.gz"
+    sha256 "de524195ba15d212d7bcc1c92b6c5339de510bdbfea35ba38e4532239478a896"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc6/preq_0.0.2-rc6_Linux_x86_64.tar.gz"
-      sha256 "8145f0a7c26f19d05fe9972d4c0556733fd112fe020949ddb0e4c13aabc5dd3f"
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc7/preq_0.0.2-rc7_Linux_x86_64.tar.gz"
+      sha256 "99653d4af1552237e6de905f5e30f38c7d64d1e086fbb04c1110627d00d3e787"
     end
   end
 
