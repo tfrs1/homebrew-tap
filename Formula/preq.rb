@@ -5,20 +5,20 @@
 class Preq < Formula
   desc ""
   homepage ""
-  version "0.0.2-rc13"
+  version "0.0.2-rc14"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc13/preq_0.0.2-rc13_Darwin_arm64.tar.gz"
-      sha256 "84175742a111ad1ce7256e5f24e47a10520f7cb4d5c13a4de03c86862eacca22"
+    if Hardware::CPU.intel?
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc14/preq_0.0.2-rc14_Darwin_x86_64.tar.gz"
+      sha256 "6bb3968f60210a1c70dd5ad6ea8b1ba629551c314fe8add7b0cd1e0229d53dc1"
 
       def install
         bin.install "preq"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc13/preq_0.0.2-rc13_Darwin_x86_64.tar.gz"
-      sha256 "6e21a81b8adc091b74a150e8577fdd0ae774d585b75c1afe998fe50cd32625a9"
+    if Hardware::CPU.arm?
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc14/preq_0.0.2-rc14_Darwin_arm64.tar.gz"
+      sha256 "308080a8c49165aa44632d0c9a76db60353517d7a3da187b36a6ece6967d53df"
 
       def install
         bin.install "preq"
@@ -28,16 +28,16 @@ class Preq < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc13/preq_0.0.2-rc13_Linux_x86_64.tar.gz"
-      sha256 "ac02c67f4b04dce43b8ab498cb39c78b5ea0871dbff128547a74e1800945ca22"
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc14/preq_0.0.2-rc14_Linux_x86_64.tar.gz"
+      sha256 "99ec455b03a037899cdaf06700abe43efb7ac96ac4a9d9122ffe7855590efbd7"
 
       def install
         bin.install "preq"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc13/preq_0.0.2-rc13_Linux_arm64.tar.gz"
-      sha256 "f8032016995481fe512ba6be903d77a4ade83e434ff74982b12f2b1cfb701103"
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc14/preq_0.0.2-rc14_Linux_arm64.tar.gz"
+      sha256 "b4242d418198ab22904d26e4d312258929572232b661bedfb03ab77076f81e3c"
 
       def install
         bin.install "preq"
