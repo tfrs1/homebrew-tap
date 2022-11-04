@@ -5,20 +5,20 @@
 class Preq < Formula
   desc ""
   homepage ""
-  version "0.0.2-rc15"
+  version "0.0.2-rc16"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc15/preq_0.0.2-rc15_Darwin_x86_64.tar.gz"
-      sha256 "f63875217908cccb213a6ec2898e95ec1fc67039b4c0898682b22697964a8239"
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc16/preq_0.0.2-rc16_Darwin_x86_64.tar.gz"
+      sha256 "c4abfb352bca7bad6ada9e45dfc0bbb8a87b31ced1b0e99333ad48aff38eee96"
 
       def install
         bin.install "preq"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc15/preq_0.0.2-rc15_Darwin_arm64.tar.gz"
-      sha256 "4710f6a9a0fba7f8c3ce67013154a2e5bb0fc4f9c75c9c114b5295e339c7e2d5"
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc16/preq_0.0.2-rc16_Darwin_arm64.tar.gz"
+      sha256 "874bf98a27c2115e87780279404fafdd298fced165fd343200d1a11fae42e468"
 
       def install
         bin.install "preq"
@@ -27,17 +27,17 @@ class Preq < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc15/preq_0.0.2-rc15_Linux_arm64.tar.gz"
-      sha256 "a27ae3a95e9372cbb9cdc2725724bd5e40636ea0770998a2876902e0799f867f"
+    if Hardware::CPU.intel?
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc16/preq_0.0.2-rc16_Linux_x86_64.tar.gz"
+      sha256 "158f1b2342326fbd691e78da44efd5706c6db3af4ae151fb148c2895be8bae7c"
 
       def install
         bin.install "preq"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc15/preq_0.0.2-rc15_Linux_x86_64.tar.gz"
-      sha256 "504405ede41463f138b33deb0b989db21c967b8d72d211a1ef1764b3dc05a879"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc16/preq_0.0.2-rc16_Linux_arm64.tar.gz"
+      sha256 "67d9fa26e317a42771752f1fb79dbabaaea84bf1dc0a6afb5f6ff29becdfec0b"
 
       def install
         bin.install "preq"
