@@ -5,20 +5,20 @@
 class Preq < Formula
   desc ""
   homepage ""
-  version "0.0.2-rc18"
+  version "0.0.2-rc19"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc18/preq_0.0.2-rc18_Darwin_x86_64.tar.gz"
-      sha256 "5764b066db47c6fbe458b68dd2fe0f74471e603da52983857380ed6b7045a46d"
+    if Hardware::CPU.arm?
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc19/preq_0.0.2-rc19_Darwin_arm64.tar.gz"
+      sha256 "4201310899104860d703400133b3b9d20459a3a82c1ee54fbfb556a1de559e89"
 
       def install
         bin.install "preq"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc18/preq_0.0.2-rc18_Darwin_arm64.tar.gz"
-      sha256 "7b92b6b83cf6a7ef3a91654a468e7065d1fcd8265d1ee3cdefdeb43bc5da85df"
+    if Hardware::CPU.intel?
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc19/preq_0.0.2-rc19_Darwin_x86_64.tar.gz"
+      sha256 "0a583280eabcfca130dc9b0a492e15246d119f4e59b685765938e01b9fec1b4e"
 
       def install
         bin.install "preq"
@@ -27,17 +27,17 @@ class Preq < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc18/preq_0.0.2-rc18_Linux_arm64.tar.gz"
-      sha256 "7c795f76767d52d8f0ecd9894d3586c5a7f8add38fb3f3e30960623b1efae1ed"
+    if Hardware::CPU.intel?
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc19/preq_0.0.2-rc19_Linux_x86_64.tar.gz"
+      sha256 "8a9300da51a5ce4087241a4d5380adf5c1c137101d8eee2d1f2d613d945c84c4"
 
       def install
         bin.install "preq"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc18/preq_0.0.2-rc18_Linux_x86_64.tar.gz"
-      sha256 "b78f37529ffa8c45ff66262cad3f31c8d363d06febfd5ed1f947c98098da60af"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc19/preq_0.0.2-rc19_Linux_arm64.tar.gz"
+      sha256 "d53df2862bbfaec98a335fff50ba41a9cc0c19c8d5e1b4172037d62d03f6153d"
 
       def install
         bin.install "preq"
