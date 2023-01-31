@@ -5,20 +5,20 @@
 class Preq < Formula
   desc ""
   homepage ""
-  version "0.0.2-rc28"
+  version "0.0.2-rc29"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc28/preq_0.0.2-rc28_Darwin_arm64.tar.gz"
-      sha256 "821fb81b5fb292167c1adef6b04088305392efcb029b6511d2fd25eacedb8e0b"
+    if Hardware::CPU.intel?
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc29/preq_0.0.2-rc29_Darwin_x86_64.tar.gz"
+      sha256 "6f7551b20523f32db74c9144ffed7887d9e651905ec9f3afa436667a4f213cf3"
 
       def install
         bin.install "preq"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc28/preq_0.0.2-rc28_Darwin_x86_64.tar.gz"
-      sha256 "add838e48c5198675782751bf1eda10858d3cba825944f819b00387c5af5a713"
+    if Hardware::CPU.arm?
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc29/preq_0.0.2-rc29_Darwin_arm64.tar.gz"
+      sha256 "fabf92caa34f1b024a21003c68bb43e8160f118c9e44613fce02abd9636b1102"
 
       def install
         bin.install "preq"
@@ -27,17 +27,17 @@ class Preq < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc28/preq_0.0.2-rc28_Linux_x86_64.tar.gz"
-      sha256 "2c3929e0e2b279ad124a522e242097bb10c21e97d20624331ff80d7cf94232be"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc29/preq_0.0.2-rc29_Linux_arm64.tar.gz"
+      sha256 "08a50ef0d80b73092eb84d5d423a0e6d01cc38e475b0d9432a39fb8c94506411"
 
       def install
         bin.install "preq"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc28/preq_0.0.2-rc28_Linux_arm64.tar.gz"
-      sha256 "975dd5a81150336a44c37a487d8d9b85ad39ea87a7562a14944816b5d87d428c"
+    if Hardware::CPU.intel?
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc29/preq_0.0.2-rc29_Linux_x86_64.tar.gz"
+      sha256 "d6afc4c95db896882c430b1587c5f14e40a5500794a99418f4acf02a4039a061"
 
       def install
         bin.install "preq"
