@@ -5,20 +5,20 @@
 class Preq < Formula
   desc ""
   homepage ""
-  version "0.0.2-rc35"
+  version "0.0.2-rc36"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc35/preq_0.0.2-rc35_Darwin_x86_64.tar.gz"
-      sha256 "d02a0d70e387810276887c5a5387022da5f09a77a99507e70cef394592b8e4d8"
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc36/preq_0.0.2-rc36_Darwin_x86_64.tar.gz"
+      sha256 "f9e1c3c18bae7914ae6696c71401c52f9ad3ff9bd214fb61b49fa4e9c1931da8"
 
       def install
         bin.install "preq"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc35/preq_0.0.2-rc35_Darwin_arm64.tar.gz"
-      sha256 "fe44e3792e42b8ea8b03ce72b2a9d9206f31bcedea7a55306401abbe5060b151"
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc36/preq_0.0.2-rc36_Darwin_arm64.tar.gz"
+      sha256 "71650d1e03cffff43660c2d67738e72fe3af415405ef02651d8dbd1d097910c7"
 
       def install
         bin.install "preq"
@@ -28,16 +28,16 @@ class Preq < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc35/preq_0.0.2-rc35_Linux_arm64.tar.gz"
-      sha256 "3b5284ac609cc5b69113b7d73892c88294cfc57aa1b4092e4c61e60b9fdc5a4a"
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc36/preq_0.0.2-rc36_Linux_arm64.tar.gz"
+      sha256 "730a82c517c27688def2709b40337744ed49c2f65dcf10d5151b8c7cd4e14193"
 
       def install
         bin.install "preq"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc35/preq_0.0.2-rc35_Linux_x86_64.tar.gz"
-      sha256 "e7f23ac75a068eb0e348ebc46efb8bb8ca934056f5309375ed8ebd7fd4307e28"
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc36/preq_0.0.2-rc36_Linux_x86_64.tar.gz"
+      sha256 "b52e1da662179a143c9d581359055c6864ac2c0b4311cba20e187237a6827bf8"
 
       def install
         bin.install "preq"
