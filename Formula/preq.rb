@@ -5,20 +5,20 @@
 class Preq < Formula
   desc ""
   homepage ""
-  version "0.0.2-rc43"
+  version "0.0.2-rc44"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc43/preq_Darwin_x86_64.tar.gz"
-      sha256 "6ef686cdb30a8e81c1a23d2e72a589933c902acc821f6a5e84f10c094823ec2a"
+    if Hardware::CPU.arm?
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc44/preq_Darwin_arm64.tar.gz"
+      sha256 "a8384201692d63c47f7cbe4d33372afea383e55a67bec48955d76d4170ddafeb"
 
       def install
         bin.install "preq"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc43/preq_Darwin_arm64.tar.gz"
-      sha256 "e2eba212a7e904a60cff9243684457ea71180ae915c33e8427be1064a9d7dbc6"
+    if Hardware::CPU.intel?
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc44/preq_Darwin_x86_64.tar.gz"
+      sha256 "80836f5a78522d8fec4607fd8b090f1352520d5c3739904eeccacadc92a60bc6"
 
       def install
         bin.install "preq"
@@ -28,16 +28,16 @@ class Preq < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc43/preq_Linux_x86_64.tar.gz"
-      sha256 "8ece6e9c205cd33287aae7b90ae650f033b593f15b21bbb351a0c95c83332e65"
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc44/preq_Linux_x86_64.tar.gz"
+      sha256 "800324e8a9d190ca835d680b4e5715e95b92b70723594e0abb9472adb2a9b5ea"
 
       def install
         bin.install "preq"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc43/preq_Linux_arm64.tar.gz"
-      sha256 "8e590fef059411a7c9a5a1d203c76453ff52e9924218b34faf495adba6814afd"
+      url "https://github.com/tfrs1/preq/releases/download/v0.0.2-rc44/preq_Linux_arm64.tar.gz"
+      sha256 "738cd5e1d6435691b8a547f9e13e3158ae522cb0320f36c72128ee81fb69b44c"
 
       def install
         bin.install "preq"
